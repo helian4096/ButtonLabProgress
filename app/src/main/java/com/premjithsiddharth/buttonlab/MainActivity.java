@@ -12,6 +12,9 @@ public class MainActivity extends AppCompatActivity {
     Button button;
     TextView textone;
     Button buttonTwo;
+    TextView textmultiply;
+    int x = 0;
+    int y = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,13 +22,22 @@ public class MainActivity extends AppCompatActivity {
         button = findViewById(R.id.main_button);
         textone = findViewById(R.id.main_text);
         buttonTwo = findViewById(R.id.sub_button);
-        int x = 0;
+        textmultiply = findViewById(R.id.sub_text);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.d("message", "Here is some text!");
                 x++;
                 textone.setText("" + x);
+            }
+        });
+        buttonTwo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("message2", "Here is more text!");
+                y++;
+                int multiplication = x*y;
+                textmultiply.setText("" + multiplication);
             }
         });
     }

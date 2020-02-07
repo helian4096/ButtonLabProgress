@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Button Lab</string>
+    <string name="question">World hello?</string>
+    <string name="button_text">Do Something</string>
+    <string name="alternate_button_text">Another Option</string>
 </resources>
